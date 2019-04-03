@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  char name[20];
+  cout << "Введите Ваше имя: "; //просьба ввести имя
+  cin >> name; //ввод имени
+  cin.ignore(); //игнорирование символа Enter
+  cout << "Доброго времени суток, " << name; //приветствие
+  cin.get(); //незакрытие консоли до нажатия Enter
+}
