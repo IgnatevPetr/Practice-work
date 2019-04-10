@@ -1,0 +1,38 @@
+﻿#include <iostream>
+#include <cstdlib>
+#include <math.h>
+
+using namespace std;
+
+class book{
+  private:
+    string title;
+    int pages;
+  public:
+    void put_pages(){
+      cin >> pages;
+    }
+    void put_title(){
+      getline(cin, title);
+    }
+    void get_info(){
+      cout << title << " (" << pages << " стр.)" << endl;
+    }
+};
+
+int main (int argc, char *argv[]){
+  book book1, book2;
+  cout << "Введите название первой книги: ";
+  book1.put_title();
+  cout << "Введите кол-во страниц первой книги: ";
+  book1.put_pages();
+  cout << "Введите название второй книги: ";
+  cin.ignore();
+  book2.put_title();
+  cout << "Введите кол-во страниц второй книги: ";
+  book2.put_pages();
+  cout << "\n" << "Вы ввели книги:" << endl;
+  book1.get_info();
+  book2.get_info();
+  return EXIT_SUCCESS;
+}
