@@ -1,0 +1,44 @@
+﻿#include <iostream>
+#include <cstdlib>
+#include <math.h>
+
+using namespace std;
+
+class students{
+  private:
+    string student_name;
+    double average_score;
+  public:
+    void put_student_name(){
+      getline(cin, student_name);
+    }
+    void put_average_score(){
+      cin >> average_score;
+    }
+    void get_info(){
+      cout << student_name << " (средний балл: " << average_score << ")" << endl;
+    }
+};
+
+int main (int argc, char *argv[]){
+  students student1, student2, student3;
+  cout << "Введите ФИО студента: ";
+  student1.put_student_name();
+  cout << "Введите средний балл студента: ";
+  student1.put_average_score();
+  cout << "Введите ФИО студента: ";
+  cin.ignore();
+  student2.put_student_name();
+  cout << "Введите средний балл студента: ";
+  student2.put_average_score();
+  cout << "Введите ФИО студента: ";
+  cin.ignore();
+  student3.put_student_name();
+  cout << "Введите средний балл студента: ";
+  student3.put_average_score();
+  cout << "\n" << "Студенты:" << endl;
+  student1.get_info();
+  student2.get_info();
+  student3.get_info();
+  return EXIT_SUCCESS;
+}
