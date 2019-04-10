@@ -1,0 +1,45 @@
+﻿#include <iostream>
+#include <cstdlib>
+#include <math.h>
+
+using namespace std;
+
+class cars{
+  private:
+    string mark;
+    string color;
+    string number;
+  public:
+    void put_mark(){
+      getline(cin, mark);
+    }
+    void put_color(){
+      getline(cin, color);
+    }
+    void put_number(){
+      getline(cin, number);
+    }
+    void get_info(){
+      cout << color << " " << mark << " (" << number << ")" << endl;
+    }
+};
+
+int main (int argc, char *argv[]){
+  cars car1, car2;
+  cout << "Введите цвет машины 1: ";
+  car1.put_color();
+  cout << "Введите марку машины 1: ";
+  car1.put_mark();
+  cout << "Введите номер машины 1: ";
+  car1.put_number();
+  cout << "Введите цвет машины 2: ";
+  car2.put_color();
+  cout << "Введите марку машины 2: ";
+  car2.put_mark();
+  cout << "Введите номер машины 2: ";
+  car2.put_number();
+  cout << "\n" << "Машины:" << endl;
+  car1.get_info();
+  car2.get_info();
+  return EXIT_SUCCESS;
+}
